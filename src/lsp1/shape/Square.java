@@ -1,23 +1,26 @@
 package lsp1.shape;
 
-public class Square extends Rectangle {
+import lsp1.Quadreliteral;
 
-    public Square(int side) {
-        super(side, side);
+public class Square implements Quadreliteral {
+    private double side;
+
+    public Square(double side) {
+        this.side = side;
     }
 
     @Override
-    public void setSideA(int sideA) {
-        super.setSideA(sideA);
+    public double getArea() {
+        return (int) Math.pow(side, 2);
     }
 
     @Override
-    public void setSideB(int sideB) {
-        super.setSideA(sideB);
+    public double getSideA() {
+        return side;
     }
 
     @Override
-    public int getArea() {
-        return (int) Math.pow(getSideA(), 2);
+    public double getSideB() {
+        return side;
     }
 }
