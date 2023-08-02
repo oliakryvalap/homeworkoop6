@@ -1,9 +1,15 @@
 package homework;
 
 public class Main{
-    public static void main(String[] args){
+    private static void main(String[] args){
         User user = new User("Bob");
-        user.report();
-        user.save();
+        Report report = new Report(user);
+        SavePersister savepersister = new SavePersister(null);
+        System.out.println();
+         User.report();
+         
     }
-}
+
+          
+        
+    }
